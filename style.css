@@ -1,0 +1,19 @@
+h1 {
+  width:500px;
+  margin: 0 auto;
+  background: gray;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+p{
+text-align: center;
+font-size: 20px;
+}
+
+.workout, .diet, .rest, .questions {
+  border: 20px solid;
+  padding:80px;
+  margin: 25px;
+}
