@@ -1,72 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fitness</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <main>
-    <h1>Fitness Web App Project Proposal</h1>
-    <section class="DataDomain">
-      <header><h2>Provide an overview of the general topic or question of interest
-        (e.g., "what is meant by 'homelessness' and why is it a particular problem in Seattle?").</h2></header>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Group 8">
+    <meta
+      name="description"
+      content="Fitness website for exercise recommendations">
+    <link rel="icon" type="image/png" href="http://example.com/myicon.png">
+    <!-- link css here -->
+    <title>Fitness Style</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Fitness Style</h1>
+    </header>
+
+    <main>
+      <!-- This is the section for the top half of the webpage -->
+      <section class="searchoption">
+
+        <!-- This is the box for search bar and button -->
+        <form>
+          <input type="text" placeholder="Search">
+          <button type="search">Search</button>
+        </form>
+
+        <!-- This is the box for body part checkbox group -->
+        <div class="bodypart">
+          <p>Body part</p>
+          <!-- This is the left column of the body part group -->
+          <div>
+            <input type="checkbox" id="chest">
+            <label for="chest">Chest</label>
+            <br>
+            <input type="checkbox" id="back">
+            <label for="back">Back</label>
+            <br>
+            <input type="checkbox" id="shoulder">
+            <label for="shoulder">Shoulder</label>
+          </div>
+
+          <!-- This is the right column of the body part group -->
+          <div>
+            <input type="checkbox" id="arms">
+            <label for="arms">Arms</label>
+            <br>
+            <input type="checkbox" id="legs">
+            <label for="legs">Legs</label>
+          </div>
+        </div>
+
+        <!-- This is the box for equipment checkbox group -->
+        <div class="equipment">
+          <!-- This is the left column of the equipment group -->
+          <div>
+            <p>Equipment</p>
+            <input type="checkbox" id="barbell" >
+            <label for="barbell">Barbell</label>
+            <br >
+            <input type="checkbox" id="dumbell" >
+            <label for="dumbell">Dumbell</label>
+            <br >
+            <input type="checkbox" id="cable-machine" >
+            <label for="cable-machine">Cable Machine</label>
+          </div>
+
+          <!-- This is the right column of the equipment group -->
+          <div>
+            <input type="checkbox" id="misc" >
+            <label for="misc">Misc</label>
+          </div>
+        </div>
+      </section>
+
+      <!-- This is the section for bottom half of the webpage -->
+      <section class="card">
+
+        <!-- This is the top row with 3 cards -->
+        <div class="toprow">
+
+          <!-- Each card contains 1 pic and 2 paragaphs -->
+          <div class="card">
+            <img src="img/barbell-bench-press.png" alt="a man lifts the barbell">
+            <p>Image Source:
+              <a href="https://www.inspireusafoundation.org/wp-content/uploads/2022/06/barbell-bench-press-benefits-1024x576.jpg">
+                Inspire USA Foundation</a>
+              </p>
+            <p>The Bench Press</p>
+            <a href="/card-template.html">Read more</a>
+          </div>
+
+          <div class="card">
+            <img src="img/barbell-bench-press.png" alt="a man lifts the barbell">
+            <p>Image Source:
+              <a href="https://www.inspireusafoundation.org/wp-content/uploads/2022/06/barbell-bench-press-benefits-1024x576.jpg">
+                Inspire USA Foundation</a>
+              </p>
+              <p>The Bench Press</p>
+            <a href="/card-template.html">Read more</a>
+          </div>
+
+          <div class="card">
+            <img src="img/barbell-bench-press.png" alt="a man lifts the barbell">
+            <p>Image Source:
+              <a href="https://www.inspireusafoundation.org/wp-content/uploads/2022/06/barbell-bench-press-benefits-1024x576.jpg">
+                Inspire USA Foundation</a>
+              </p>
+              <p>The Bench Press</p>
+            <a href="/card-template.html">Read more</a>
+          </div>
+        </div>
+
+        <!-- This is the bottom row with 3 cards -->
+        <div class="bottomrow">
+
+          <!-- Each card contains 1 pic and 2 paragaphs -->
+          <div class="card">
+            <img src="img/barbell-bench-press.png" alt="a man lifts the barbell">
+            <p>Image Source:
+              <a href="https://www.inspireusafoundation.org/wp-content/uploads/2022/06/barbell-bench-press-benefits-1024x576.jpg">
+                Inspire USA Foundation</a>
+              </p>
+              <p>The Bench Press</p>
+            <a href="/card-template.html">Read more</a>
+          </div>
+
+          <div class="card">
+            <img src="img/barbell-bench-press.png" alt="a man lifts the barbell">
+            <p>Image Source:
+              <a href="https://www.inspireusafoundation.org/wp-content/uploads/2022/06/barbell-bench-press-benefits-1024x576.jpg">
+                Inspire USA Foundation</a>
+              </p>
+              <p>The Bench Press</p>
+            <a href="/card-template.html">Read more</a>
+          </div>
+
+          <div class="card">
+            <img src="img/barbell-bench-press.png" alt="a man lifts the barbell">
+            <p>Image Source:
+              <a href="https://www.inspireusafoundation.org/wp-content/uploads/2022/06/barbell-bench-press-benefits-1024x576.jpg">
+                Inspire USA Foundation</a>
+              </p>
+              <p>The Bench Press</p>
+            <a href="/card-template.html">Read more</a>
+          </div>
+
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2023 INFO Group 8</p>
       <p>
-        The topic that we are trying to tackle is fitness by creating an application that tailors a fitness program toward the user's goals.
-        So if the user is interested in hypertrophy, we will create a fitness regime based on building muscle. If the user is interested in
-        powerlifting, we will create a regime around increasing the user's max numbers. We are creating this application because a lot of people in fitness
-        experience paralysis by analysis because there are so many different workout, splits; so, through our application, we are able to solve this for
-        the user by focusing on their goals.
+        Mark Butler, Leul Demelie, Minh Trung Le, Russell Liu, Yonas Gebeyehu
+        Mekonnen
       </p>
-      <p>An information technology problem that a fitness app that provides a workout plan, diet,
-        and rest guidance could face is a lack of personalization. Many fitness apps offer generic
-        workout plans and diets that may not consider an individual's unique fitness goals,
-        physical limitations, or dietary restrictions. Additionally, the app may not be able
-        to adjust the workout plan or diet as the user progresses and reaches new fitness milestones.
-        This issue could lead to frustration for users who are not seeing the desired results and
-        may cause them to stop using the app altogether. Another issue could be the lack of
-        integration with other health-related apps and devices, such as heart rate monitors,
-        sleep trackers, and nutrition apps, which would provide more comprehensive data and
-        personalized recommendations to the user.
-      </p>
-      <p>One previous or existing attempt to solve the problem of lack of personalization in fitness 
-        apps is using machine learning and artificial intelligence. The app can adjust the workout plan 
-        and diet recommendations by using data from the user's activity level, fitness goals, and 
-        progress. Additionally, by integrating with other health-related apps and devices, the app can gather 
-        more comprehensive data and provide even more personalized recommendations to the user. Some existing 
-        fitness apps such as MyFitnessPal, Fitbit, and Endomondo already use this technology to personalize 
-        workout and diet plans for their users.
-      </p>
-    </section>
-    <section class="AppDescription">
-      <header>
-        <h2>Our Vision</h2>
-      </header>
-      <p>
-        A common area of interest in our group is fitness, and we are looking to build a web app
-        that contains various different fitness programs. We believe our web app could be
-        beneficial to a range of different people, from those just looking to start going
-        to the gym to people that are more advanced in their fitness journey.
-      </p>
-      <p>
-        We aim to provide helpful fitness information tailored to each individual by creating an
-        interface for the user to find different fitness programs based on their goals.
-        For example, a user looking to lose weight could select fat loss as one of the goals
-        when searching for a fitness program. After selecting a program, our web app would
-        list out the various exercises in the program. By clicking on each exercise, there
-        would be directions on how to perform the exercise with visual aids correctly.
-        Through such a system, we could recommend appropriate programs to a wide range of users.
-      </p>
-      <p>
-        Besides offering fitness programs, we also want to cater to users who simply wish to
-        quickly search through different exercises. For example, if a bodybuilder is searching
-        for a new chest exercise, by selecting chest exercise, our web app will recommend
-        different chest exercises, and our web app will offer the same functionalities as
-        previously described when the user clicks on the various exercises.
-      </p>
-    </section>
-  </main>
-</body>
+    </footer>
+  </body>
 </html>
