@@ -89,11 +89,20 @@ button[type="search"] {
   body {
     font-size: medium;
   }
+
+  body {
+    background-image: url('../img/small-screen.jpg');
+    background-size: contain;
+  }
+
+  footer{
+    color:white;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   body {
-    background-image: url('../img/will-fill-in-later0');
+    background-image: url('../img/medium-screen.jpg');
     background-size: stretch;
     background-position: center;
   }
@@ -109,7 +118,7 @@ button[type="search"] {
     display: flex;
     align-content: space-around;
     justify-content: space-around;
-    color: black;
+    color: white;
   }
 
   main {
@@ -139,12 +148,27 @@ button[type="search"] {
   }
 
   body {
-    background-image: url('../img/will-fill-in-later');
+    background-image: url('../img/large-screen.jpg');
     background-color: #f2f2f2;
     background-position: center;
     background-size: cover;
   }
 
+  .bodypart,
+  .equipment{
+    color: white;
+  }
+
+  .toprow, .bottomrow{
+    display: inline-block;
+  }
+
+  footer{
+    color: white;
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+  }
   h1 {
     font-size: 7rem;
   }
