@@ -1,4 +1,4 @@
-body {
+/* body {
   font-family: Arial, sans-serif;
   margin: 0;
 }
@@ -78,14 +78,12 @@ button[type="search"] {
 .card a {
   display: block;
   margin-top: 20px;
-}
+} */
 
 @media only screen and (max-width: 767px) {
-  .bodypart,
-  .equipment {
-    display: none;
+  #equipment-section{
+    color: whitesmoke;
   }
-
   body {
     font-size: medium;
   }
@@ -107,6 +105,10 @@ button[type="search"] {
     background-position: center;
   }
 
+  #equipment-section{
+    color: white;
+    font-size: 25px;
+  }
   .toprow,
   .bottomrow {
     display: flex;
@@ -137,6 +139,10 @@ button[type="search"] {
     height: 100%;
   }
 
+  #equipment-section{
+    color: antiquewhite;
+    font-size: 1.5em;
+  }
   main {
     font-size: x-large;
   }
