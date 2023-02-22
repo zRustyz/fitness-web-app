@@ -7,8 +7,6 @@ import { RenderContent } from './ExcercisePage';
 function App() {
   return (
     <div className="App text-start">
-      <RenderHeader />
-      <RenderContent />
     </div>
   );
 }
