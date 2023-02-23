@@ -1,0 +1,44 @@
+[
+  {
+    "name": "The Abdomianl Crunch",
+    "image": "https://www.healthypostnatalbody.com/wp-content/uploads/2019/10/crunch-muscles-300x168.png",
+    "image_source":"Healthy Body",
+    "body_part": "Chest",
+    "equipment": "Misc"
+  },
+  {
+    "name": "The Lunges",
+    "image": "https://fitnessvolt.com/wp-content/uploads/2019/01/Lunges.jpg",
+    "image_source":"Fitness Volt",
+    "body_part": "Legs",
+    "equipment": "Dumbell"
+  },
+  {
+    "name": "The Bicep Curl",
+    "image": "https://i0.wp.com/www.rawbarrel.com/wp-content/uploads/2018/06/biceps-curl-anatomy.jpg?fit=724%2C380&ssl=1",
+    "image_source":"Raw Barbell",
+    "body_part": "Arms",
+    "equipment": "Barbell"
+  },
+  {
+    "name": "The Lateral Raise",
+    "image": "http://weighttraining.guide/wp-content/uploads/2016/05/dumbbell-lateral-raise-resized.png",
+    "image_source":"Weight Training",
+    "body_part": "Shoulder",
+    "equipment": "Barbell"
+  },
+  {
+    "name": "The seated Row",
+    "image": "https://s3.amazonaws.com/prod.skimble/assets/1871464/image_iphone.jpg",
+    "image_source":"Skimble",
+    "body_part": "Back",
+    "equipment": "Cable Machine"
+  },
+  {
+    "name": "The Bench Press",
+    "image": "http://127.0.0.1:5500/img/barbell-bench-press.png",
+    "image_source":"Inspire USA Foundation",
+    "body_part": "Chest",
+    "equipment": "Cable Machine"
+  }
+]
