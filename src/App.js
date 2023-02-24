@@ -2,6 +2,7 @@ import React, { useState } from 'react'; //import React Component
 //import { RenderHeader } from './ExcercisePage';
 //import { RenderContent } from './ExcercisePage';
 import{Header} from './Header.js'
+import{Search} from './Search.js'
 import DataTable from './components/DataTable';
 import ExerciseSelectForm from './components/ExerciseSelectForm';
 
@@ -33,6 +34,7 @@ function App(props) {
   return (
     <div className="container">
       <Header/>
+      <Search/>
 
       <main>
         <ExerciseSelectForm bodyPartOptions={uniqueExercise} applyFilterCallback={applyFilter} />
