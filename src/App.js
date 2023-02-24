@@ -1,7 +1,7 @@
 import React, { useState } from 'react'; //import React Component
-import './App.css';
-import { RenderHeader } from './ExcercisePage';
-import { RenderContent } from './ExcercisePage';
+//import { RenderHeader } from './ExcercisePage';
+//import { RenderContent } from './ExcercisePage';
+import{Header} from './Header.js'
 import DataTable from './components/DataTable';
 import ExerciseSelectForm from './components/ExerciseSelectForm';
 
@@ -9,8 +9,8 @@ import ExerciseSelectForm from './components/ExerciseSelectForm';
 function App(props) {
   const [bodyPartFilter, setBodyPartFilter] = useState('');
 
-  //get sorted list of unique body parts. reduce array of objects into array of strings, 
-  //convert to Set to get uniques, spread back into array, and sort 
+  //get sorted list of unique body parts. reduce array of objects into array of strings,
+  //convert to Set to get uniques, spread back into array, and sort
   const uniqueExercise = [...new Set(props.gameData.reduce((all, current) => {
     return all.concat([current.body_part]);
   }, []))].sort();
@@ -29,13 +29,11 @@ function App(props) {
   const applyFilter = (bodyPartName) => {
     setBodyPartFilter(bodyPartName);
   };
-  
+
   return (
     <div className="container">
-      <header className="mb-3">
-        <h1>Fitness Style</h1>
-      </header>
-    
+      <Header/>
+
       <main>
         <ExerciseSelectForm bodyPartOptions={uniqueExercise} applyFilterCallback={applyFilter} />
         <DataTable data={displayedData} />
