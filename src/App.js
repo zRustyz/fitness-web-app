@@ -3,6 +3,10 @@ import React, { useState } from 'react'; //import React Component
 //import { RenderContent } from './ExcercisePage';
 import{Header} from './Header.js'
 import{Search} from './Search.js'
+import{TopRow} from './TopRow.js';
+import{Equipment}from './Equipment.js';
+import{BottomRow}from './BottomRow';
+import{Footer}from './Footer.js';
 import DataTable from './components/DataTable';
 import ExerciseSelectForm from './components/ExerciseSelectForm';
 
@@ -35,19 +39,24 @@ function App(props) {
     <div className="container">
       <Header/>
       <Search/>
+      <Equipment/>
+      <TopRow/>
+      <BottomRow/>
+      <Footer/>
+
 
       <main>
         <ExerciseSelectForm bodyPartOptions={uniqueExercise} applyFilterCallback={applyFilter} />
         <DataTable data={displayedData} />
       </main>
 
-      <footer>
+      {/* <footer>
       <p>© 2023 INFO Group 8</p>
       <p>
         Mark Butler, Leul Demelie, Minh Trung Le, Russell Liu, Yonas Gebeyehu
         Mekonnen
       </p>
-      </footer>
+      </footer> */}
     </div>
   );
 }
