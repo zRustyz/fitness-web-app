@@ -1,9 +1,10 @@
 import React from 'react';
+import RenderExcercisePage from './ExcercisePage';
 
 export default function CardList(props) {
 
   let sortedData = props.data;
- 
+
   const content = sortedData.map((exercise, index) => {
     return (
       <div key={index} className="col-md-4">
@@ -33,9 +34,9 @@ function DataCard({ data }) {
           Image Source:{" "}
           <a href={data.imgSrcLink}>{data.imgSrcSite}</a>
         </p>
-        <a href={data.link} className="btn btn-primary">
+        <button className="btn btn-primary" onClick={RenderExcercisePage(data.exerciseNamereplace(/\s+/g, ''))}>
           Read more
-        </a>
+        </button>
       </div>
     </div>
   );

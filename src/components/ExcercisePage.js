@@ -1,22 +1,26 @@
 import React from 'react';
 
 
+export default function RenderExcercisePage(props) {
+  let container = document.getElementById('container');
+  container.innerHTML = '';
+}
 
-export function RenderHeader(props) {
+function RenderHeader(props) {
   return(
-  <header class="container-fluid bg-dark text-white pt-4 pb-5">
-    <a href="www.google.com" class="text-decoration-none text-white h4 pt-2" >Home</a>
-    <h1 class="pt-5">The Bench Press</h1>
+  <header className="container-fluid bg-dark text-white pt-4 pb-5">
+    <a href="www.google.com" className="text-decoration-none text-white h4 pt-2" >Home</a>
+    <h1 className="pt-5">The Bench Press</h1>
   </header>
   )
 }
 
-export function RenderContent(props) {
+function RenderContent(props) {
   return(
   <main>
-    <div class="container">
-      <div class="card my-3">
-        <div class="card-body">
+    <div className="container">
+      <div className="card my-3">
+        <div className="card-body">
           <img src="https://www.inspireusafoundation.org/wp-content/uploads/2022/06/barbell-bench-press-benefits-1024x576.jpg"
           alt="the bench press being performed" class="img-fluid rounded mb-3"/>
           <h2> Instructions:</h2>
@@ -31,10 +35,10 @@ export function RenderContent(props) {
           </p>
         </div>
       </div>
-      <div class="card">
-        <div class="card-body">
+      <div className="card">
+        <div className="card-body">
           <h2>Tips & Suggestions</h2>
-          <ul class="my-3">
+          <ul className="my-3">
             <li>Warm-up properly before lifting heavy weights.</li>
             <li>Maintain a proper grip width for each hand.</li>
             <li>Keep your shoulder blades squeezed together.</li>
@@ -55,17 +59,4 @@ export function RenderContent(props) {
     </div>
   </main>
   )
-}
-
-export function Test(props) {
-  return(
-    <p>hello world!</p>
-  )
-}
-
-export function Temp(props) {
-  <header class="container-fluid bg-dark text-white pt-4 pb-5">
-    <a href="index.html" class="text-decoration-none text-white h4 pt-2" >Home</a>
-    <h1 class="pt-5">The Bench Press</h1>
-  </header>
 }
