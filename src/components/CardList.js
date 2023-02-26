@@ -34,7 +34,7 @@ function DataCard({ data }) {
           Image Source:{" "}
           <a href={data.imgSrcLink}>{data.imgSrcSite}</a>
         </p>
-        <button className="btn btn-primary" onClick={RenderExcercisePage(data.exerciseNamereplace(/\s+/g, ''))}>
+        <button className="btn btn-primary" onClick={RenderExcercisePage(data.exerciseName.replace(/\s+/g, ''))}>
           Read more
         </button>
       </div>

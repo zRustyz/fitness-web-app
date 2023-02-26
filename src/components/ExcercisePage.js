@@ -2,8 +2,7 @@ import React from 'react';
 
 
 export default function RenderExcercisePage(props) {
-  let container = document.getElementById('container');
-  container.innerHTML = '';
+  console.log('clicked');
 }
 
 function RenderHeader(props) {
