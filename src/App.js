@@ -7,6 +7,8 @@ import { BottomRow } from './BottomRow';
 import { Footer } from './Footer.js';
 import CardList from './components/CardList';
 import ExerciseSelectForm from './components/ExerciseSelectForm';
+import { RenderHeader } from './components/ExcercisePage.js';
+import { RenderContent } from './components/ExcercisePage.js';
 
 function App(props) {
   const [equipmentFilter, setEquipmentFilter] = useState('');
@@ -78,6 +80,15 @@ function App(props) {
       <Footer />
     </div>
   );
+
+  //comment out above statement and uncomment below statment for individual excercise page
+  // return (
+  //   <div className='container'>
+  //   <RenderHeader/>
+  //   <RenderContent/>
+  //   </div>
+  // )
+
 }
 
 

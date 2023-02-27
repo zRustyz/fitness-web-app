@@ -1,11 +1,12 @@
 import React from 'react';
 
-
 export default function RenderExcercisePage(props) {
   console.log('clicked');
 }
 
-function RenderHeader(props) {
+
+
+export function RenderHeader(props) {
   return(
   <header className="container-fluid bg-dark text-white pt-4 pb-5">
     <a href="www.google.com" className="text-decoration-none text-white h4 pt-2" >Home</a>
@@ -14,7 +15,7 @@ function RenderHeader(props) {
   )
 }
 
-function RenderContent(props) {
+export function RenderContent(props) {
   return(
   <main>
     <div className="container">
@@ -50,8 +51,8 @@ function RenderContent(props) {
             <li>Focus on form and proper technique over weightlifting.</li>
           </ul>
           <p>Leave a suggestion here!</p>
-          <input placeholder="Type here"/>
-          <button id="submit"
+          <input placeholder="Type here" className='me-3'/>
+          <button id="submit" className='btn btn-primary'
           >Submit</button>
         </div>
       </div>
