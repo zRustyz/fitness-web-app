@@ -58,5 +58,15 @@
     "link": "/card-template.html",
     "body_part": "Chest",
     "equipment": "Cable Machine"
+  },
+  {
+    "imgSrc": "https://www.bodybuildingmealplan.com/wp-content/uploads/Dumbbell-Fly-Muscles-Worked-Image-1200x787.jpg",
+    "imgAlt": "Dumbbell Fly tutorial",
+    "imgSrcLink": "https://www.bodybuildingmealplan.com/wp-content/uploads/Dumbbell-Fly-Muscles-Worked-Image-1200x787.jpg",
+    "imgSrcSite": "Nutritioneering",
+    "exerciseName": "Dumbbel Fly",
+    "link": "/card-template.html",
+    "body_part": "Chest",
+    "equipment": "Dumbell"
   }
 ]

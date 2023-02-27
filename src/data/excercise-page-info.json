@@ -1,9 +1,61 @@
 {
-  "TheAbdominalCrunch": {},
-  "TheLunges": {},
-  "TheBicepCurl": {},
-  "TheLateralRaise": {},
-  "TheSeatedRow": {},
+  "TheAbdominalCrunch": {
+    "name": "The Abdominal Crunch",
+    "imgSrc": "https://www.healthypostnatalbody.com/wp-content/uploads/2019/10/crunch-muscles-300x168.png",
+    "imgAlt": "The Abdominal Crunch being performed",
+    "instructions": "To perform the abdominal crunch, fold your arms on your chest and tighten your abdominal muscles. Raise your head and shoulders off of the floor. Hold for three deep breaths, then return to starting position.",
+    "comments":
+    ["Gaze at the thighs to position your neck ",
+     "Lift from the ribs",
+     "Fold under the ribs",
+     "Pull the belly in (especially on the lift)",
+     "Release the glutes and maintain space under the lower back."]
+  },
+  "TheLunges": {
+    "name": "The Lunges",
+    "imgSrc": "https://fitnessvolt.com/wp-content/uploads/2019/01/Lunges.jpg",
+    "imgAlt": "The Lunges being performed",
+    "instructions": "To perform the lunges, grip the dumbbells with your hands, Stand up straight and place your right foot forward and left foot straight back. Drop your back knee down to the ground.",
+    "comments":
+    ["Keep your body upright through the movement. Try to avoid leaning forward too much.",
+     "Keep your core engaged throughout the entire lunge.",
+     "Don’t overextend your leg when you lunge forward, which can cause your back to arch.",
+     "Try to step out enough so your body is comfortable vertically, and your torso and hips are straight down. Not stepping out far enough is also unsafe for your knees and can lead to injuries.",]
+  },
+  "TheBicepCurl": {
+    "name": "The Bicep Curl",
+    "imgSrc": "https://i0.wp.com/www.rawbarrel.com/wp-content/uploads/2018/06/biceps-curl-anatomy.jpg?fit=724%2C380&ssl=1",
+    "imgAlt": "The Bicep Curl being performed",
+    "instructions": "To perform the bicep curl, hold a dumbbell with your palm facing upward. Slowly curl the weight up by bending your elbow, keeping your elbow close to your body. Then slowly lower the weight to the starting position.",
+    "comments":
+    ["Use proper form: Keep your elbows close to your body and avoid swinging your arms to get momentum.",
+     "Start with lighter weights.",
+     "Focus on the eccentric portion.",
+     "Don't forget to breathe: Exhale as you lift the weight and inhale as you lower it back down..",
+     "Mix up your grip to target different parts of the biceps and provide a more well-rounded workout for the muscle."]
+  },
+  "TheLateralRaise": {
+    "name": "The Lateral Raise",
+    "imgSrc": "http://weighttraining.guide/wp-content/uploads/2016/05/dumbbell-lateral-raise-resized.png",
+    "imgAlt": "The Lateral Raise being performed",
+    "instructions": "To perform the lateral riase, stand straight with your feet shoulder-width apart and your arms at your sides, holding a pair of dumbbells in your hands. Slowly lift your arms straight out to the sides, keeping them parallel to the floor.",
+    "comments":
+    ["Keep your core engaged and your back straight throughout the movement.",
+     "Use a weight that allows you to perform the exercise with proper form.",
+     "Avoid swinging your arms or using momentum to lift the dumbbells.",
+     "Breathe in as you lift the weights and exhale as you lower them."]
+  },
+  "TheSeatedRow": {
+    "name": "The Seated Row",
+    "imgSrc": "https://s3.amazonaws.com/prod.skimble/assets/1871464/image_iphone.jpg",
+    "imgAlt": "The Seated Row being performed",
+    "instructions": "To perform the Seated Row, sit upright on the bench and plant your feet on the floor or foot pads, knees bent. Extend your arms and hold the handle or cable.",
+    "comments":
+    ["Keep your elbows close to your body",
+     "Move slowly and maintain a good posture",
+     "Keep your shoulder blades squeezed together.",
+     "Keep your torso stationary."]
+  },
   "TheBenchPress": {
     "name": "The Bench Press",
     "imgSrc": "https://www.inspireusafoundation.org/wp-content/uploads/2022/06/barbell-bench-press-benefits-1024x576.jpg",
@@ -18,5 +70,19 @@
      "Breathe out as you lift and inhale as you lower the bar.",
      "Gradually increase weight to avoid injury.",
      "Focus on form and proper technique over weightlifting."]
+  },
+  "TheDumbbellFly": {
+    "name": "The Dumbbell Fly",
+    "imgSrc": "https://www.bodybuildingmealplan.com/wp-content/uploads/Dumbbell-Fly-Muscles-Worked-Image-1200x787.jpg",
+    "imgAlt": "The Dumbbell Fly being performed",
+    "instructions": "To perform a dumbbell fly, start by sitting on a bench while holding a pair of dumbbells on your thighs. Lay back on the bench and hold the dumbbells near your armpits.",
+    "comments":
+    ["Sit on a bench holding a dumbbell on each thigh",
+     "Lay back on the bench so the dumbbells are near your armpits",
+     "Press the dumbbells up to arm’s length with palms facing in",
+     "Slowly lower the dumbbells with your arms slightly bent",
+     "Feel your chest stretch at the bottom",
+     "Raise the dumbbells back up until your arms are straight in front of you",
+     "Repeat for the desired number of reps and drop the dumbbells"]
   }
 }
