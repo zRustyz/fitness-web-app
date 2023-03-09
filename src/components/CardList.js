@@ -26,8 +26,8 @@ export default function CardList(props) {
 
 function DataCard({ data }) {
   return (
-    <div className="card">
-      <img src={data.imgSrc} alt={data.imgAlt} className="card-img-top"/>
+    <div className="card m-2">
+      <img src={data.imgSrc} alt={data.imgAlt} className="card-img-top" style={{height: "200px", objectFit: "cover"}} />
       <div className="card-body">
         <h5 className="card-title">{data.exerciseName}</h5>
         <p className="card-text">
