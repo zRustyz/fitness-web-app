@@ -9,7 +9,7 @@ import CardList from './components/CardList';
 import ExerciseSelectForm from './components/ExerciseSelectForm';
 import { RenderHeader } from './components/ExcercisePage.js';
 import { RenderContent } from './components/ExcercisePage.js';
-import { getDatabase, ref, set as firebaseSet, push as firebasePush, onValue } from 'firebase/database'
+import { getDatabase, ref, set, push, onValue } from 'firebase/database'
 import { FormSubmit } from './components/FormSubmit.js';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; //import router
 
@@ -27,7 +27,7 @@ function App(props) {
   // handle exercise object array
   const [exerciseObjArray, setExerciseObjArray] = useState();
 
-  //effect to run when the component first loads
+  // effect to run when the component first loads
   useEffect(() => {
 
     //hook up a listener to Firebase
@@ -47,7 +47,7 @@ function App(props) {
 
   }, []) //array is list of variables that will cause this to rerun if changed
 
-  // Push new exercise to database
+  // Push new exercise to database using push method of firebase which is promise-based AJAX requests 
   const addExercise = (exerciseName, imgSrc, imgAlt, imgSrcLink, imgSrcSite, link, bodyPart, equipment, instructions, comments) => {
     const newExerciseObj = {
       "exerciseName": exerciseName,
@@ -64,7 +64,7 @@ function App(props) {
 
     const db = getDatabase();
     const allExerciseRef = ref(db, "allExercises");
-    firebasePush(allExerciseRef, newExerciseObj);
+    push(allExerciseRef, newExerciseObj);
   }
 
 // Define uniqueExercise state and setter
