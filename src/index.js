@@ -4,6 +4,7 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.css';
 // import EXERCISE_DATA from './data/exercise-data.json'; //the data to display
 import { initializeApp } from "firebase/app"; //import firebase
+import { BrowserRouter } from 'react-router-dom';
 
 // Web app's Firebase configuration
 const firebaseConfig = {
@@ -22,7 +23,9 @@ initializeApp(firebaseConfig);
 // Update root
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <BrowserRouter>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </BrowserRouter>
 );

@@ -1,5 +1,6 @@
 import React from 'react';
 import RenderExcercisePage from './ExcercisePage';
+import { Link } from 'react-router-dom';
 
 export default function CardList(props) {
 
@@ -49,9 +50,7 @@ function DataCard({ data }) {
           Image Source:{" "}
           <a href={data.imgSrcLink}>{data.imgSrcSite}</a>
         </p>
-        <button className="btn btn-primary" onClick={RenderExcercisePage(data.exerciseName.replace(/\s+/g, ''))}>
-          Read more
-        </button>
+        <Link className="btn btn-primary" to={'/' + data.exerciseName.replace(/\s+/g, '')}> Read More</Link>
       </div>
     </div>
   );

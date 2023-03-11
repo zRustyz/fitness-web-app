@@ -1,17 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import { Header } from './Header.js';
-import { Search } from './Search.js';
-import { TopRow } from './TopRow.js';
-import { Equipment } from './Equipment.js';
-import { BottomRow } from './BottomRow';
 import { Footer } from './Footer.js';
 import CardList from './components/CardList';
 import ExerciseSelectForm from './components/ExerciseSelectForm';
-import { RenderHeader } from './components/ExcercisePage.js';
-import { RenderContent } from './components/ExcercisePage.js';
+import RenderExcercisePage from './components/ExcercisePage.js';
 import { getDatabase, ref, set, push, onValue } from 'firebase/database'
 import { FormSubmit } from './components/FormSubmit.js';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; //import router
+import { BrowserRouter as Router, Routes, Route, Switch } from 'react-router-dom'; //import router
 
 function App(props) {
   const [equipmentFilter, setEquipmentFilter] = useState('');
@@ -33,7 +28,7 @@ function App(props) {
     //hook up a listener to Firebase
     const db = getDatabase();
     const allExercises = ref(db, "allExercises");
-    
+
     //fetch message data from firebase
     onValue(allExercises, function(snapshot) {
       const allExerciseObj = snapshot.val();
@@ -47,7 +42,7 @@ function App(props) {
 
   }, []) //array is list of variables that will cause this to rerun if changed
 
-  // Push new exercise to database using push method of firebase which is promise-based AJAX requests 
+  // Push new exercise to database using push method of firebase which is promise-based AJAX requests
   const addExercise = (exerciseName, imgSrc, imgAlt, imgSrcLink, imgSrcSite, link, bodyPart, equipment, instructions, comments) => {
     const newExerciseObj = {
       "exerciseName": exerciseName,
@@ -127,10 +122,6 @@ useEffect(() => {
   return (
     <div className="container">
       <Header />
-      {/* <Search /> */}
-      {/* <Equipment /> */}
-      {/* <TopRow /> */}
-      {/* <BottomRow /> */}
       <p>Please select the type of equipment and body part to show the approriate exercise for you.</p>
       <ExerciseSelectForm
         equipmentOptions={uniqueExercise}
@@ -142,7 +133,7 @@ useEffect(() => {
         applyFilterCallback={applyFilter}
       />
       <CardList data={displayedData} />
-      <FormSubmit 
+      <FormSubmit
         addExercise={addExercise}
       />
       <Footer />
@@ -151,10 +142,9 @@ useEffect(() => {
 
   //comment out above statement and uncomment below statment for individual excercise page
   // return (
-  //   <div className='container'>
-  //   <RenderHeader/>
-  //   <RenderContent/>
-  //   </div>
+  //   <Routes>
+  //     <Route path=':excerciseName' element={<RenderExcercisePage />} />
+  //   </Routes>
   // )
 
 }
