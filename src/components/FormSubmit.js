@@ -13,12 +13,62 @@ export function FormSubmit(props) {
   const [instructions, setInstructions] = useState('');
   const [comments, setComments] = useState('');
 
+  // Handle body part change so when the user clicks on the button, 
+  // it will be converted to the corresponding text
+  const handleBodyPartChange = (event) => {
+    const value = event.target.value;
+    console.log(value);
+    setBodyPart(value); 
+  };
+
+  // Handle equipment change so when the user clicks on the button, 
+  // it will be converted to the corresponding text
+  const handleEquipmentChange = (event) => {
+    const value = event.target.value;
+    console.log(value);
+      setEquipment(value); 
+  };
+
+  // Handle submit button
   const handleSubmit = (event) => {
     event.preventDefault();
-
+  
+    // Set default value if there is an empty string in the field
+    let imgSrcFixed = imgSrc;
+    let imgAltFixed = imgAlt;
+    let exerciseNameFixed = exerciseName;
+    let imgSrcLinkFixed = imgSrcLink;
+    let imgSrcSiteFixed = imgSrcSite;
+    let bodyPartFixed = bodyPart;
+    let equipmentFixed = equipment;
+    let linkFixed = link;
+  
+    if(imgSrc === ''){
+      imgSrcFixed = 'https://thumbs.dreamstime.com/z/no-image-available-icon-photo-camera-flat-vector-illustration-132483296.jpg';
+      imgAltFixed = 'No available image';
+    }
+    if(exerciseName === ''){
+      exerciseNameFixed = 'No exercise name available';
+    }
+    if(imgSrcLink === ''){
+      imgSrcLinkFixed = 'No link available';
+    }
+    if(imgSrcSite === ''){
+      imgSrcSiteFixed = 'Dreamstime';
+    }
+    if(bodyPart === ''){
+      bodyPartFixed = 'Chest';
+    }
+    if(equipment === ''){
+      equipmentFixed = 'Misc';
+    }
+    if(link === ''){
+      linkFixed = '/card-template.html';
+    }
+  
     // call the callback function with the form data
-    props.addExercise(exerciseName, imgSrc, imgAlt, imgSrcLink, imgSrcSite, link, bodyPart, equipment, instructions, comments);
-
+    props.addExercise(exerciseNameFixed, imgSrcFixed, imgAltFixed, imgSrcLinkFixed, imgSrcSiteFixed, link, bodyPartFixed, equipmentFixed, instructions, comments);
+  
     // reset the form
     setExerciseName('');
     setImgSrc('');
@@ -30,31 +80,89 @@ export function FormSubmit(props) {
     setEquipment('');
     setInstructions('');
     setComments('');
-  };
+  };  
 
   return (
     <div className="container">
-      <header className="bg-dark text-light py-3">
+
+      <header className="bg-dark text-light py-3 mt-3">
           <div className="container">
               <h3 className="mb-0">Exercise Submit Form</h3>
           </div>
       </header>
+
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Please enter the information below to submit new exercise to the database:</label>
+          <label className="mt-3">Please enter the information below to submit new exercise to the database:</label>
         </div>
+
         <div className="form-group mb-3 mt-3">
           <label>Exercise Name:</label>
           <input type="text" placeholder="e.g., The Abdominal Crunch" className="form-control" value={exerciseName} onChange={(e) => setExerciseName(e.target.value)} />
         </div>
+
         <div className="form-group mb-3">
           <label>Body Part:</label>
-          <input type="text" placeholder="Type one of these: Chest, Legs, Arms, Shoulder, or Back" className="form-control" value={bodyPart} onChange={(e) => setBodyPart(e.target.value)} />
+          <div className="form-check">
+            <input className="form-check-input" type="radio" name="bodyPartRadio" id="chestRadio" value="Chest" defaultChecked onChange={handleBodyPartChange} />
+            <label className="form-check-label" htmlFor="chestRadio">
+              Chest
+            </label>
+          </div>
+          <div className="form-check">
+            <input className="form-check-input" type="radio" name="bodyPartRadio" id="legsRadio" value="Legs" onChange={handleBodyPartChange} />
+            <label className="form-check-label" htmlFor="legsRadio">
+              Legs
+            </label>
+          </div>
+          <div className="form-check">
+            <input className="form-check-input" type="radio" name="bodyPartRadio" id="armsRadio" value="Arms" onChange={handleBodyPartChange} />
+            <label className="form-check-label" htmlFor="armsRadio">
+              Arms
+            </label>
+          </div>
+          <div className="form-check">
+            <input className="form-check-input" type="radio" name="bodyPartRadio" id="shoulderRadio" value="Shoulder" onChange={handleBodyPartChange} />
+            <label className="form-check-label" htmlFor="shoulderRadio">
+              Shoulder
+            </label>
+          </div>
+          <div className="form-check">
+            <input className="form-check-input" type="radio" name="bodyPartRadio" id="backRadio" value="Back" onChange={handleBodyPartChange} />
+            <label className="form-check-label" htmlFor="backRadio">
+              Back
+            </label>
+          </div>
         </div>
+
         <div className="form-group mb-3">
           <label>Equipment:</label>
-          <input type="text" placeholder="Type one of these: Misc, Dumbell, Barbell, or Cable Machine" className="form-control" value={equipment} onChange={(e) => setEquipment(e.target.value)} />
+          <div className="form-check">
+            <input className="form-check-input" type="radio" name="equipmentRadio" id="barbellRadio" value="Barbell" onChange={handleEquipmentChange} />
+            <label className="form-check-label" htmlFor="barbellRadio">
+              Barbell
+            </label>
+          </div>
+          <div className="form-check">
+            <input className="form-check-input" type="radio" name="equipmentRadio" id="dumbellRadio" value="Dumbell" onChange={handleEquipmentChange} />
+            <label className="form-check-label" htmlFor="dumbellRadio">
+              Dumbell
+            </label>
+          </div>
+          <div className="form-check">
+            <input className="form-check-input" type="radio" name="equipmentRadio" id="cableMachineRadio" value="Cable Machine" onChange={handleEquipmentChange} />
+            <label className="form-check-label" htmlFor="cableMachineRadio">
+              Cable Machine
+            </label>
+          </div>
+          <div className="form-check">
+            <input className="form-check-input" type="radio" name="equipmentRadio" id="miscRadio" value="Misc" defaultChecked onChange={handleEquipmentChange} />
+            <label className="form-check-label" htmlFor="miscRadio">
+              Misc
+            </label>
+          </div>
         </div>
+
         <div className="form-group mb-3">
           <label>Name of the Web Source:</label>
           <input type="text" placeholder="e.g., Fitness Volt" className="form-control" value={imgSrcSite} onChange={(e) => setImgSrcSite(e.target.value)} />
@@ -81,7 +189,7 @@ export function FormSubmit(props) {
         </div>
         <div className="form-group mb-3">
           <label>Comments:</label>
-          <textarea placeholder="Seperate each comment using -. For example: Keep your body upright through the movement. - Keep your core engaged throughout the entire lunge."
+          <textarea placeholder="Seperate each comment using -. For example: Keep your body upright through the movement. - Keep your core engaged throughout the entire lunge." 
           className="form-control" value={comments} onChange={(e) => setComments(e.target.value)} rows="5"></textarea>
         </div>
         <div>
