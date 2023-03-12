@@ -1,10 +1,14 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDumbbell } from '@fortawesome/free-solid-svg-icons'
+import { faWeightHanging } from '@fortawesome/free-solid-svg-icons'
 
 export function Equipment (props){
 
   return (
       <div>
         {/* This is the box for equipment checkbox group */}
+        <FontAwesomeIcon icon={faWeightHanging} className="hover:text-red-500"></FontAwesomeIcon>
         <div className="row" id="equipment-section">
           <div className="col-md-6">
             <p>Equipment</p>
@@ -13,6 +17,7 @@ export function Equipment (props){
               <label className="form-check-label" htmlFor="barbell">Barbell</label>
             </div>
             <div className="form-check">
+              <FontAwesomeIcon icon={faDumbbell}></FontAwesomeIcon>
               <input className="form-check-input" type="checkbox" id="dumbell" />
               <label className="form-check-label" htmlFor="dumbell">Dumbell</label>
             </div>
