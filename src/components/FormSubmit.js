@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from 'react';
 
 export function FormSubmit(props) {
@@ -80,7 +81,7 @@ export function FormSubmit(props) {
         </div>
         <div className="form-group mb-3">
           <label>Comments:</label>
-          <textarea placeholder="Seperate each comment using -. For example: Keep your body upright through the movement. - Keep your core engaged throughout the entire lunge." 
+          <textarea placeholder="Seperate each comment using -. For example: Keep your body upright through the movement. - Keep your core engaged throughout the entire lunge."
           className="form-control" value={comments} onChange={(e) => setComments(e.target.value)} rows="5"></textarea>
         </div>
         <div>
