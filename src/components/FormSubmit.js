@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from 'react';
+import { Link } from 'react-router-dom'; 
 
 export function FormSubmit(props) {
   const [exerciseName, setExerciseName] = useState('');
@@ -25,7 +26,6 @@ export function FormSubmit(props) {
   // it will be converted to the corresponding text
   const handleEquipmentChange = (event) => {
     const value = event.target.value;
-    console.log(value);
       setEquipment(value); 
   };
 
@@ -84,13 +84,6 @@ export function FormSubmit(props) {
 
   return (
     <div className="container">
-
-      <header className="bg-dark text-light py-3 mt-3">
-          <div className="container">
-              <h3 className="mb-0">Exercise Submit Form</h3>
-          </div>
-      </header>
-
       <form onSubmit={handleSubmit}>
         <div>
           <label className="mt-3">Please enter the information below to submit new exercise to the database:</label>

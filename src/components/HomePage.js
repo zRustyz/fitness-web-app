@@ -5,6 +5,7 @@ import CardList from './CardList';
 import ExerciseSelectForm from './ExerciseSelectForm';
 import { getDatabase, ref, set, push, onValue } from 'firebase/database';
 import { FormSubmit } from './FormSubmit';
+import { Link } from 'react-router-dom'; 
 
 function RenderHomePage(props) {
   const [equipmentFilter, setEquipmentFilter] = useState('');
@@ -39,26 +40,6 @@ function RenderHomePage(props) {
     });
 
   }, []) //array is list of variables that will cause this to rerun if changed
-
-  // Push new exercise to database using push method of firebase which is promise-based AJAX requests
-  const addExercise = (exerciseName, imgSrc, imgAlt, imgSrcLink, imgSrcSite, link, bodyPart, equipment, instructions, comments) => {
-    const newExerciseObj = {
-      "exerciseName": exerciseName,
-      "imgSrc": imgSrc,
-      "imgAlt": imgAlt,
-      "imgSrcLink": imgSrcLink,
-      "imgSrcSite": imgSrcSite,
-      "link": link,
-      "bodyPart": bodyPart,
-      "equipment": equipment,
-      "instructions": instructions,
-      "comments": comments
-    }
-
-    const db = getDatabase();
-    const allExerciseRef = ref(db, "allExercises");
-    push(allExerciseRef, newExerciseObj);
-  }
 
 // Define uniqueExercise state and setter
 const [uniqueExercise, setUniqueExercise] = useState([]);
@@ -131,9 +112,6 @@ useEffect(() => {
         applyFilterCallback={applyFilter}
       />
       <CardList data={displayedData} />
-      <FormSubmit
-        addExercise={addExercise}
-      />
       <Footer />
     </div>
   );
