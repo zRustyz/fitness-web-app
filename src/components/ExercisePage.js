@@ -6,17 +6,6 @@ function RenderExcercisePage(props) {
   const param = useParams().exerciseName;
   const exercise = EXERCISES_INFO[param];
   const [comments, updateComments] = useState(exercise.comments);
-  const [input, updateInput] = useState('');
-
-  const handleInput = (event) => {
-    updateInput(event.target.value);
-  }
-  const addComment = () => {
-    if (input.replace(/\s/g, '') !== '') {
-      updateComments([...comments, input]);
-    }
-    updateInput('');
-  }
 
   return(
     <div>
@@ -41,8 +30,9 @@ function RenderExcercisePage(props) {
                 {comments.map((comment) => <li>{comment}</li>)}
               </ul>
               <p>Leave a suggestion here!</p>
-              <input placeholder="Type here" className='me-3' value={input} onChange={handleInput}/>
-              <button id="submit" className='btn btn-primary' onClick={addComment}>Submit</button>
+              <input placeholder="Type here" className='me-3'/>
+              <button id="submit" className='btn btn-primary'
+              >Submit</button>
             </div>
           </div>
         </div>
