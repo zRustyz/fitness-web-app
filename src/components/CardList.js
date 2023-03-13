@@ -1,5 +1,5 @@
 import React from 'react';
-import RenderExcercisePage from './ExcercisePage';
+import RenderExcercisePage from './ExercisePage';
 import { Link } from 'react-router-dom';
 
 export default function CardList(props) {

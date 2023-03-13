@@ -1,13 +1,12 @@
 import React from "react";
-import { Container, Navbar } from 'react-bootstrap';
 
 export function Header(props){
 
     return (
-        <Navbar bg="dark" variant="dark" expand="lg">
-        <Container>
-            <Navbar.Brand>Fitness Style</Navbar.Brand>
-        </Container>
-        </Navbar>
-    );
-}
+    <header className="bg-dark text-light py-3">
+        <div className="container">
+            <h1 className="mb-0">Fitness Style</h1>
+        </div>
+    </header>
+)
+};

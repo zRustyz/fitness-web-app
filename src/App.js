@@ -3,7 +3,7 @@ import { Header } from './Header.js';
 import { Footer } from './Footer.js';
 import CardList from './components/CardList';
 import ExerciseSelectForm from './components/ExerciseSelectForm';
-import RenderExcercisePage from './components/ExcercisePage.js';
+import RenderExercisePage from './components/ExercisePage.js';
 import { getDatabase, ref, set, push, onValue } from 'firebase/database'
 import { FormSubmit } from './components/FormSubmit.js';
 import { BrowserRouter as Router, Routes, Route, Switch } from 'react-router-dom'; //import router
@@ -119,33 +119,33 @@ useEffect(() => {
     setIncludeBack(includeBack);
   };
 
-  return (
-    <div className="container">
-      <Header />
-      <p>Please select the type of equipment and body part to show the approriate exercise for you.</p>
-      <ExerciseSelectForm
-        equipmentOptions={uniqueExercise}
-        includeArms={includeArms}
-        includeLegs={includeLegs}
-        includeChest={includeChest}
-        includeShoulder={includeShoulder}
-        includeBack={includeBack}
-        applyFilterCallback={applyFilter}
-      />
-      <CardList data={displayedData} />
-      <FormSubmit
-        addExercise={addExercise}
-      />
-      <Footer />
-    </div>
-  );
+  // return (
+  //   <div className="container">
+  //     <Header />
+  //     <p>Please select the type of equipment and body part to show the approriate exercise for you.</p>
+  //     <ExerciseSelectForm
+  //       equipmentOptions={uniqueExercise}
+  //       includeArms={includeArms}
+  //       includeLegs={includeLegs}
+  //       includeChest={includeChest}
+  //       includeShoulder={includeShoulder}
+  //       includeBack={includeBack}
+  //       applyFilterCallback={applyFilter}
+  //     />
+  //     <CardList data={displayedData} />
+  //     <FormSubmit
+  //       addExercise={addExercise}
+  //     />
+  //     <Footer />
+  //   </div>
+  // );
 
   //comment out above statement and uncomment below statment for individual excercise page
-  // return (
-  //   <Routes>
-  //     <Route path=':excerciseName' element={<RenderExcercisePage />} />
-  //   </Routes>
-  // )
+  return (
+    <Routes>
+      <Route path=':exerciseName' element={<RenderExercisePage />} />
+    </Routes>
+  )
 
 }
 
