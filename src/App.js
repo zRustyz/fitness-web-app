@@ -12,16 +12,18 @@ import Form from './components/Form';
 import About from './components/About';
 
 function App(props) {
+  
 
   return (
+    <div className="container-fluid d-flex flex-column">
     <Routes>
       <Route path=':exerciseName' element={<RenderExercisePage />} />
       <Route path='/form' element={<Form />} />
       <Route path='/about' element={<About />} />
       <Route index element={<RenderHomePage />} />
     </Routes>
+    </div>
   )
-
 }
 
 
