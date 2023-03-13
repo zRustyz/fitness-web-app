@@ -131,9 +131,6 @@ useEffect(() => {
         applyFilterCallback={applyFilter}
       />
       <CardList data={displayedData} />
-      <FormSubmit
-        addExercise={addExercise}
-      />
       <Footer />
     </div>
   );
