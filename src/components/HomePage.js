@@ -1,15 +1,13 @@
 import React, {useEffect, useState} from 'react';
-import { Header } from './Header.js';
-import { Footer } from './Footer.js';
-import CardList from './components/CardList';
-import ExerciseSelectForm from './components/ExerciseSelectForm';
-import RenderExercisePage from './components/ExercisePage.js';
+import { Header } from '../Header.js';
+import { Footer } from '../Footer.js';
+import CardList from './CardList';
+import ExerciseSelectForm from './ExerciseSelectForm';
 import { getDatabase, ref, set, push, onValue } from 'firebase/database'
-import { FormSubmit } from './components/FormSubmit.js';
+import { FormSubmit } from './FormSubmit.js';
 import { BrowserRouter as Router, Routes, Route, Switch } from 'react-router-dom'; //import router
-import Homepage from './components/HomePage.js';
 
-function App(props) {
+function Homepage(props) {
   const [equipmentFilter, setEquipmentFilter] = useState('');
   const [includeArms, setIncludeArms] = useState(false);
   const [includeLegs, setIncludeLegs] = useState(false);
@@ -120,36 +118,26 @@ useEffect(() => {
     setIncludeBack(includeBack);
   };
 
-  // return (
-  //   <div className="container">
-  //     <Header />
-  //     <p>Please select the type of equipment and body part to show the approriate exercise for you.</p>
-  //     <ExerciseSelectForm
-  //       equipmentOptions={uniqueExercise}
-  //       includeArms={includeArms}
-  //       includeLegs={includeLegs}
-  //       includeChest={includeChest}
-  //       includeShoulder={includeShoulder}
-  //       includeBack={includeBack}
-  //       applyFilterCallback={applyFilter}
-  //     />
-  //     <CardList data={displayedData} />
-  //     <FormSubmit
-  //       addExercise={addExercise}
-  //     />
-  //     <Footer />
-  //   </div>
-  // );
-
-  //comment out above statement and uncomment below statment for individual excercise page
   return (
-    <Routes>
-      <Route path=':exerciseName' element={<RenderExercisePage />} />
-      <Route indexPath= 'homepage' element ={<Homepage />}/>
-    </Routes>
-  )
+    <div className="container">
+      <Header />
+      <p>Please select the type of equipment and body part to show the approriate exercise for you.</p>
+      <ExerciseSelectForm
+        equipmentOptions={uniqueExercise}
+        includeArms={includeArms}
+        includeLegs={includeLegs}
+        includeChest={includeChest}
+        includeShoulder={includeShoulder}
+        includeBack={includeBack}
+        applyFilterCallback={applyFilter}
+      />
+      <CardList data={displayedData} />
+      <FormSubmit
+        addExercise={addExercise}
+      />
+      <Footer />
+    </div>
+);
+  }
 
-}
-
-
-export default App;
+  export default Homepage; 
