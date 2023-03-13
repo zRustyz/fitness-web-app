@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { link, useParams } from 'react-router-dom';
+import { Link, link, useParams } from 'react-router-dom';
 import EXERCISES_INFO from '../data/exercise-page-info.json';
 
 function RenderExcercisePage(props) {
@@ -10,7 +10,7 @@ function RenderExcercisePage(props) {
   return(
     <div>
       <header className="container-fluid bg-dark text-white pt-4 pb-5">
-        <a href="www.google.com" className="text-decoration-none text-white h4 pt-2" >Home</a>
+        <Link to='/' className="text-decoration-none text-white h4 pt-2">Home</Link>
         <h1 className="pt-5">{exercise.name}</h1>
       </header>
       <main>

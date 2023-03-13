@@ -1,13 +1,12 @@
 import React, {useEffect, useState} from 'react';
-import { Header } from '../Header.js';
-import { Footer } from '../Footer.js';
+import { Header } from '../Header';
+import { Footer } from '../Footer';
 import CardList from './CardList';
 import ExerciseSelectForm from './ExerciseSelectForm';
-import { getDatabase, ref, set, push, onValue } from 'firebase/database'
-import { FormSubmit } from './FormSubmit.js';
-import { BrowserRouter as Router, Routes, Route, Switch } from 'react-router-dom'; //import router
+import { getDatabase, ref, set, push, onValue } from 'firebase/database';
+import { FormSubmit } from './FormSubmit';
 
-function Homepage(props) {
+function RenderHomePage(props) {
   const [equipmentFilter, setEquipmentFilter] = useState('');
   const [includeArms, setIncludeArms] = useState(false);
   const [includeLegs, setIncludeLegs] = useState(false);
@@ -118,7 +117,7 @@ useEffect(() => {
     setIncludeBack(includeBack);
   };
 
-  return (
+    return (
     <div className="container">
       <Header />
       <p>Please select the type of equipment and body part to show the approriate exercise for you.</p>
@@ -137,7 +136,7 @@ useEffect(() => {
       />
       <Footer />
     </div>
-);
-  }
+  );
+}
 
-  export default Homepage; 
+export default RenderHomePage;
