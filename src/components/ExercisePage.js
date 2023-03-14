@@ -32,11 +32,41 @@ function RenderExcercisePage(props) {
   }, []) //array is list of variables that will cause this to rerun if changed
 
   const data = exerciseObjArray.find(obj => obj.exerciseName === exerciseName);
+
   const comment = data?.comments || "";
-  const suggestion = data?.suggestions || "";
 
   const commentArray = comment.split(" - ");
   
+  // handle Suggestion object array
+  const [suggestionObjArray, setSuggestionObjArray] = useState([]);
+
+  // effect to run when the component first loads
+  useEffect(() => {
+
+    //hook up a listener to Firebase
+    const db = getDatabase();
+    const allSuggestions = ref(db, "allSuggestions");
+
+    //fetch exercise data from firebase
+    onValue(allSuggestions, function(snapshot) {
+      const allSuggestionObj = snapshot.val();
+      const objKeys = Object.keys(allSuggestionObj);
+      const objArray = objKeys.map((keyString) => {
+        allSuggestionObj[keyString].key = keyString;
+        return allSuggestionObj[keyString];
+      })
+      setSuggestionObjArray(objArray); //update state & rerender
+    });
+
+  }, []) //array is list of variables that will cause this to rerun if changed
+
+  // map over the filtered array to render the suggestions
+  const suggestionData = suggestionObjArray.map((obj) => ({
+    key: obj.key,
+    suggestion: obj.suggestion,
+    userName: obj.userName,
+  }));
+
   const addSuggestion = (name, newSuggestion) => {
     const newSuggestionObj = {
       "userName": name,
@@ -44,8 +74,8 @@ function RenderExcercisePage(props) {
     }
 
     const db = getDatabase();
-    const allExercisesRef = ref(db, 'allExercises');
-    push(ref(allExercisesRef, data.key, 'userSuggestion'), newSuggestionObj);
+    const allSuggestions = ref(db, "allSuggestions");
+    push(allSuggestions, newSuggestionObj);
   }
 
   return (
@@ -58,12 +88,13 @@ function RenderExcercisePage(props) {
         <div className="container">
           <div className="card my-3">
             <div className="card-body">
-              <img src={data?.imgSrc} alt={data?.imgAlt} class="img-fluid rounded mb-3" />
+              <img src={data?.imgSrc} alt={data?.imgAlt} className="img-fluid rounded mb-3" />
               <h2> Instructions:</h2>
               <p>{data?.instructions}</p>
             </div>
           </div>
-          <div className="card">
+
+          <div className="card my-3">
             <div className="card-body">
               <h2>Tips & Suggestions</h2>
               <div>
@@ -76,8 +107,19 @@ function RenderExcercisePage(props) {
               </div>
             </div>
           </div>
+
+          <div className="card my-3">
+          <div className="card-body">
+            <h2>User's Suggestions</h2>
+            {suggestionData.map((obj) => (
+              <div key={obj.key}>
+                <p>{obj.userName} {": "} {obj.suggestion}</p>
+              </div>
+            ))}
+          </div>
         </div>
-        <SuggestionSubmit addSuggestion={addSuggestion} />
+      </div>
+      <SuggestionSubmit addSuggestion={addSuggestion} />
       </main>
       <Footer />
     </div>
