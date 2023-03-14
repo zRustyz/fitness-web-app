@@ -28,7 +28,7 @@ function RenderHomePage(props) {
     const db = getDatabase();
     const allExercises = ref(db, "allExercises");
 
-    //fetch message data from firebase
+    //fetch exercise data from firebase
     onValue(allExercises, function(snapshot) {
       const allExerciseObj = snapshot.val();
       const objKeys = Object.keys(allExerciseObj);

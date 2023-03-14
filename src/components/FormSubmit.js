@@ -18,7 +18,6 @@ export function FormSubmit(props) {
   // it will be converted to the corresponding text
   const handleBodyPartChange = (event) => {
     const value = event.target.value;
-    console.log(value);
     setBodyPart(value); 
   };
 

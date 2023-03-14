@@ -7,7 +7,6 @@ export function SuggestionSubmit(props) {
 
   const handleNameChange = (event) => {
     const value = event.target.value;
-    console.log(value);
     setName(value); 
   };
 
@@ -15,7 +14,6 @@ export function SuggestionSubmit(props) {
   // it will be converted to the corresponding text
   const handleSuggestionChange = (event) => {
     const value = event.target.value;
-    console.log(value);
       setSuggestion(value); 
   };
 

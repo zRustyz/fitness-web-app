@@ -1,9 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
-import CardList from './CardList';
-import ExerciseSelectForm from './ExerciseSelectForm';
-import { getDatabase, ref, set, push, onValue } from 'firebase/database';
+import { getDatabase, ref, push } from 'firebase/database';
 import { FormSubmit } from './FormSubmit';
 
 
