@@ -8,13 +8,13 @@ import { BrowserRouter } from 'react-router-dom';
 
 // Web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBqc0skaCI4Fujqz8Nc4yKnXYrFT55ZCXQ",
-  authDomain: "fitness-style.firebaseapp.com",
-  databaseURL: "https://fitness-style-default-rtdb.firebaseio.com",
-  projectId: "fitness-style",
-  storageBucket: "fitness-style.appspot.com",
-  messagingSenderId: "645510946811",
-  appId: "1:645510946811:web:27b531861de9b1219f355e"
+  apiKey: "AIzaSyBZyGWP_yAAeb-E3JkXnvAP4KOASViycAU",
+  authDomain: "fitness-web-app-6b611.firebaseapp.com",
+  projectId: "fitness-web-app-6b611",
+  storageBucket: "fitness-web-app-6b611.appspot.com",
+  messagingSenderId: "169828727523",
+  appId: "1:169828727523:web:9dad3d261c949d4f5123d6",
+  measurementId: "G-V6ZER9JTG6"
 };
 
 // Initialize Firebase

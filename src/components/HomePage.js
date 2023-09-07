@@ -5,15 +5,15 @@ import CardList from './CardList';
 import ExerciseSelectForm from './ExerciseSelectForm';
 import { getDatabase, ref, set, push, onValue } from 'firebase/database';
 import { FormSubmit } from './FormSubmit';
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 
 function RenderHomePage(props) {
   const [equipmentFilter, setEquipmentFilter] = useState('');
-  const [includeArms, setIncludeArms] = useState(false);
-  const [includeLegs, setIncludeLegs] = useState(false);
-  const [includeChest, setIncludeChest] = useState(false);
-  const [includeShoulder, setIncludeShoulder] = useState(false);
-  const [includeBack, setIncludeBack] = useState(false);
+  const [includeArms, setIncludeArms] = useState(true);
+  const [includeLegs, setIncludeLegs] = useState(true);
+  const [includeChest, setIncludeChest] = useState(true);
+  const [includeShoulder, setIncludeShoulder] = useState(true);
+  const [includeBack, setIncludeBack] = useState(true);
 
   // hook up a listener to Firebase
   const db = getDatabase();
