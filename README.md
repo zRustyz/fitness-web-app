@@ -83,7 +83,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](img/ExcercisePage.png)
+![excercise page](img/ExcercisePage.png)
 
 Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `zRustyz`, `fitness-web-app`, `twitter_handle`, `russellcliu`, `email_client`, `russell.liu05@gmail.com`, `Fitness Web App`, `A web app helping users find different strength training excercises based on their goals and equipments.`
 
@@ -183,7 +183,7 @@ Project Link: [https://github.com/zRustyz/fitness-web-app](https://github.com/zR
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* [](This web app is designed to be used with Firebase, however it is not currently hosted on firebase, as such some functionalities may be limited)
+* This web app is designed to be used with Firebase, however it is not currently hosted on firebase, as such some functionalities may be limited
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
