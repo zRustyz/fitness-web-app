@@ -34,10 +34,10 @@
     <img src="img/logo.jpeg" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">fitness web app</h3>
+<h3 align="center">Fitness Web App</h3>
 
   <p align="center">
-    A web app helping users find different strength training excercises based on their goals and equipments
+    A web app helping users find different strength training excercises based on their goals and equipments.
     <br />
     <a href="https://github.com/zRustyz/fitness-web-app"><strong>Explore the docs »</strong></a>
     <br />
@@ -85,7 +85,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `zRustyz`, `fitness-web-app`, `twitter_handle`, `russellcliu`, `email_client`, `russell.liu05@gmail.com`, `fitness web app`, `A web app helping users find different strength training excercises based on their goals and equipments`
+Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `zRustyz`, `fitness-web-app`, `twitter_handle`, `russellcliu`, `email_client`, `russell.liu05@gmail.com`, `Fitness Web App`, `A web app helping users find different strength training excercises based on their goals and equipments.`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -95,6 +95,8 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 * [![React][React.js]][React-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+* [![Firebase][Firebase.com]][Firebase-url]
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -116,18 +118,18 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+Install an local version of the web app
+1. Clone the repo
    ```sh
    git clone https://github.com/zRustyz/fitness-web-app.git
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+4. Start the web app
+   ```sh
+   npm start
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -189,7 +191,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Russell Liu - russell.liu05@gmail.com@russell.liu05@gmail.com_client.com
+Russell Liu - russell.liu05@gmail.com
 
 Project Link: [https://github.com/zRustyz/fitness-web-app](https://github.com/zRustyz/fitness-web-app)
 
@@ -239,3 +241,5 @@ Project Link: [https://github.com/zRustyz/fitness-web-app](https://github.com/zR
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com
+[Firebase.com]: https://www.gstatic.com/devrel-devsite/prod/v7db733f00c0d99dad786750e992bc66e6c873245f59e4b119bd1ab1eab1fd08b/firebase/images/lockup.svg
+[Firebase-url]: firebase.google.com
