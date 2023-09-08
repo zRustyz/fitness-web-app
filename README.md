@@ -83,7 +83,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="https://github.com/zRustyz/fitness-web-app/blob/main/img/ExcercisePage.png" alt="excercise page" width="800" height="600">
+<img src="https://github.com/zRustyz/fitness-web-app/blob/main/img/ExcercisePage.png" alt="excercise page" width="60%" height="60%">
 
 Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `zRustyz`, `fitness-web-app`, `twitter_handle`, `russellcliu`, `email_client`, `russell.liu05@gmail.com`, `Fitness Web App`, `A web app helping users find different strength training excercises based on their goals and equipments.`
 
