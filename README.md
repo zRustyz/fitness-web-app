@@ -241,5 +241,5 @@ Project Link: [https://github.com/zRustyz/fitness-web-app](https://github.com/zR
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com
-[Firebase.com]: https://www.gstatic.com/devrel-devsite/prod/v7db733f00c0d99dad786750e992bc66e6c873245f59e4b119bd1ab1eab1fd08b/firebase/images/lockup.svg
-[Firebase-url]: firebase.google.com
+[Firebase.com]: https://img.shields.io/badge/FireBase-4A4A55?style=for-the-badge&logo=firebase&logoColor=FFCA28
+[Firebase-url]: https://firebase.google.com
