@@ -83,7 +83,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](img/ExcercisePage.png)
 
 Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `zRustyz`, `fitness-web-app`, `twitter_handle`, `russellcliu`, `email_client`, `russell.liu05@gmail.com`, `Fitness Web App`, `A web app helping users find different strength training excercises based on their goals and equipments.`
 
@@ -94,8 +94,8 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 ### Built With
 
 * [![React][React.js]][React-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![Firebase][Firebase.com]][Firebase-url]
+* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -105,12 +105,10 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+This web app is currently not being hosted on firebase, however, you may still create an local version and use it by following these simple steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
 * npm
   ```sh
   npm install npm@latest -g
@@ -146,25 +144,8 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/zRustyz/fitness-web-app/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- CONTRIBUTING -->
 ## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
@@ -202,9 +183,8 @@ Project Link: [https://github.com/zRustyz/fitness-web-app](https://github.com/zR
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+* [](This web app is designed to be used with Firebase, however it is not currently hosted on firebase, as such some functionalities may be limited)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
