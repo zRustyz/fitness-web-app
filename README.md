@@ -137,7 +137,7 @@ Install an local version of the web app
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-<img src="https://github.com/zRustyz/fitness-web-app/blob/main/img/LandingPage" alt="excercise page" width="60%" height="60%">
+<img src="https://github.com/zRustyz/fitness-web-app/blob/main/img/LandingPage.png" alt="excercise page" width="60%" height="60%">
 
 The home page of the web app. Filtering tools are included to help the user narrow down different excersises. The user may naviagte to the excercise page from here as well as the sugguestion page.
 
