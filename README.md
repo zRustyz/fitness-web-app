@@ -85,7 +85,7 @@
 
 <img src="https://github.com/zRustyz/fitness-web-app/blob/main/img/ExcercisePage.png" alt="excercise page" width="60%" height="60%">
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `zRustyz`, `fitness-web-app`, `twitter_handle`, `russellcliu`, `email_client`, `russell.liu05@gmail.com`, `Fitness Web App`, `A web app helping users find different strength training excercises based on their goals and equipments.`
+This web app aims to help users discover and find different excercises for strength training. It includes filters to narrow down the excercises by bodyparts as well as equipment the user has access to. Each individual excercise includes a seperate page detailing how to perform the excercise as well as a discussion forum. The user may also contribute by adding new excerses through the suguestion page.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -137,9 +137,20 @@ Install an local version of the web app
 <!-- USAGE EXAMPLES -->
 ## Usage
 
+<img src="https://github.com/zRustyz/fitness-web-app/blob/main/img/LandingPage" alt="excercise page" width="60%" height="60%">
+
+The home page of the web app. Filtering tools are included to help the user narrow down different excersises. The user may naviagte to the excercise page from here as well as the sugguestion page.
+
+<img src="https://github.com/zRustyz/fitness-web-app/blob/main/img/ExcercisePageFull.png" alt="excercise page" width="60%" height="60%">
+
+Example of the individual excercise page. Demostration pictures and directions are included to guide the user to properly perform the excercise. A discussion forum at the bottom allows users to provide additional tips and sugguestions as well as sharing their experiences.
+
+<img src="https://github.com/zRustyz/fitness-web-app/blob/main/img/SugguestionPage.png" alt="excercise page" width="60%" height="60%">
+
+The sugguestion page allows users to contribute by expanding the number of excercises the web app includes.
+
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -147,7 +158,10 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- CONTRIBUTING -->
 ## Contributing
 
+If you would like to add additional excercises to the web app, please use the sugguestion page.
+
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+
 Don't forget to give the project a star! Thanks again!
 
 1. Fork the Project
